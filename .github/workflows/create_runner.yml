@@ -16,8 +16,11 @@ jobs:
       - name: Set Subscription
         run: |
           az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          az group list -o table
 
-    
+      - name: Create self-hosted runner vm
+        run: |
+          az group create \
+            --name rg_runner \
+            --location westeurope
 
 
