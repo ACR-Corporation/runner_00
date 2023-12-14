@@ -1,4 +1,4 @@
-name: test_self_runner_terrafomr
+name: test_self_runner_terraform
 on:
   workflow_dispatch:
 
