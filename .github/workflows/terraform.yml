@@ -1,0 +1,12 @@
+name: test_self_runner_terrafomr
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [self-hosted, label-beauty-terraform]
+
+    steps:
+
+      - name: Run a one-line script
+        run: echo Hello, world!
