@@ -1,11 +1,21 @@
 name: test_self_runner
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+       required: true
+       default: 'label-beauty-az-cli'
+       type: choice
+       options:
+         - label-beauty-az-cli
 
 
 jobs:
   build:
     runs-on: self-hosted
+
+    
+    
     steps:
 
       - uses: actions/checkout@v3
