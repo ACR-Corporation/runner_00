@@ -23,4 +23,14 @@ jobs:
             --name rg_runner \
             --location westeurope
 
+          az vm create \
+            --resource-group rg_runner \
+            --name runner \
+            --image Ubuntu2204 \
+            --admin-username pierrc \
+            --generate-ssh-keys \
+            --custom-data cloud-init.yml \
+            --size Standard_B1s \
+            --public-ip-address-dns-name runner00
+
 
