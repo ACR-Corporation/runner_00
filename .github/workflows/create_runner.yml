@@ -16,6 +16,7 @@ jobs:
       - name: Set Subscription
         run: |
           az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          az group list -o table
 
     
 
