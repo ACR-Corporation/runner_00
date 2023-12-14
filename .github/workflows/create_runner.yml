@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Azure login
         uses: azure/login@v1
         with:
@@ -29,7 +33,7 @@ jobs:
             --image Ubuntu2204 \
             --admin-username pierrc \
             --admin-password Password123$ \
-            --custom-data cloud-init.yml \
+            --custom-data ./az_cli/gh.sh \
             --size Standard_B1s \
             --public-ip-address-dns-name runner00
 
