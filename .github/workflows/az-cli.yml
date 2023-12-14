@@ -1,4 +1,4 @@
-name: test_self_runner
+name: test_self_runner_az_cli
 on:
   workflow_dispatch:
 
