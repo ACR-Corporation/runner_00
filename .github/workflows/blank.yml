@@ -1,22 +1,11 @@
 name: test_self_runner
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-       required: true
-       default: 'label-beauty-az-cli'
-       type: choice
-       options:
-         - label-beauty-az-cli
-         - label-beauty-terraform
-
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: [self-hosted, label-beauty-az-cli]
 
-    
-    
     steps:
 
       - uses: actions/checkout@v3
