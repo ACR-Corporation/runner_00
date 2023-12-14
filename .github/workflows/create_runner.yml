@@ -28,7 +28,7 @@ jobs:
             --name runner \
             --image Ubuntu2204 \
             --admin-username pierrc \
-            --generate-ssh-keys \
+            --ssh-key-value ${{ secrets.KEY_SSH_PUB }} \
             --custom-data cloud-init.yml \
             --size Standard_B1s \
             --public-ip-address-dns-name runner00
