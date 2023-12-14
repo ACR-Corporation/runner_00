@@ -8,6 +8,7 @@ on:
        type: choice
        options:
          - label-beauty-az-cli
+         - label-beauty-terraform
 
 
 jobs:
