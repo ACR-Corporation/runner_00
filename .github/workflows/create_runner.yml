@@ -1,0 +1,21 @@
+name: Create self-hosted runner
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Create self-hosted runner
+        uses: actions/runner-registration@v2
+        with:
+          name: ${{ github.repository }}-self-hosted-runner
+          repository: ${{ github.repository }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          labels: self-hosted, label-beauty-az-cli
+          runnergroup: ${{ github.repository }}-self-hosted-runner-group
+          workdir: _work
+          replace: true
