@@ -1,4 +1,4 @@
-name: Create self-hosted runner
+name: create self-hosted runner vm
 on:
   workflow_dispatch:
 
