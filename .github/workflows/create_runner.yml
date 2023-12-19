@@ -21,7 +21,7 @@ jobs:
         run: |
           az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Create self-hosted runner vm
+      - name: create_self_hosted_runner_vm
         run: |
           az group create \
             --name rg_runner \
