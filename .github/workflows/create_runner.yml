@@ -35,5 +35,3 @@ jobs:
             --admin-password Password123$ \
             --size Standard_B1s \
             --public-ip-address-dns-name runner00
-
-
