@@ -1,4 +1,4 @@
-name: create self-hosted runner vm
+name: create_self_hosted_runner_vm
 on:
   workflow_dispatch:
 
@@ -32,6 +32,5 @@ jobs:
             --name runner \
             --image Ubuntu2204 \
             --admin-username pierrc \
-            --admin-password Password123$ \
             --size Standard_B1s \
             --public-ip-address-dns-name runner00
