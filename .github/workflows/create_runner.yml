@@ -32,5 +32,6 @@ jobs:
             --name runner \
             --image Ubuntu2204 \
             --admin-username pierrc \
+            --admin-password Password123$ \
             --size Standard_B1s \
             --public-ip-address-dns-name runner00

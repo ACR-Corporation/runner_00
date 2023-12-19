@@ -1,6 +1,6 @@
 #!/bin/bash
 REPO="ACR-Corporation/runner_00"
-ACCESS_TOKEN="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"
+ACCESS_TOKEN="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"
 VERSION="2.311.0"
 
 
