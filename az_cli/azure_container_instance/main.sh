@@ -10,7 +10,7 @@ IMAGE_VERSION=0.0.1
 CONTAINER_NAME=runner
 
 REPO_NAME=ACR-Corporation/runner_00
-TOKEN_GH=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
+TOKEN_GH=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
 
 # create a resource group
 echo "Creating resource group $RESOURCE_GROUP_RUNNER_NAME..."
@@ -30,8 +30,7 @@ az container create \
     --registry-username $ACR_NAME \
     --registry-password $PWD_ACR \
     --image $IMAGE_NAME:$IMAGE_VERSION \
-    --restart-policy Always \
+    --restart-policy Never \
     --environment-variables REPO=$REPO_NAME TOKEN=$TOKEN_GH
 
 
-    
