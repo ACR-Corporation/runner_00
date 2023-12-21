@@ -8,6 +8,5 @@ jobs:
 
     steps:
 
-      - name: Installation Azure CLI
-        run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+      - name: Run a one-line script
+        run: echo Hello, world!
