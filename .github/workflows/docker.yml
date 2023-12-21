@@ -8,7 +8,10 @@ jobs:
 
     steps:
 
-      - name: login azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Version Az CLI
+        run: |
+          az --version
+
+      - name: Version Terraform
+        run: |
+          terraform version
